@@ -1,6 +1,56 @@
+<!-- readme-top -->
+<div align="center">
+
+<img src="docs/banner.svg" alt="Shop Bot — E-commerce customer-service bot" width="100%">
+
 # Shop Bot — E-commerce Customer-Service Bot for Telegram, Bale & Rubika
 
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE) ![Python 3](https://img.shields.io/badge/python-3-3776AB?logo=python&logoColor=white) ![Telegram](https://img.shields.io/badge/Telegram-bot-26A5E4?logo=telegram&logoColor=white) ![Bale](https://img.shields.io/badge/Bale-bot-1BBE8C) ![Rubika](https://img.shields.io/badge/Rubika-bot-E8423F) [![GitHub stars](https://img.shields.io/github/stars/reza-em/multi-platform-shop-chatbot-telegram-bale?style=social)](https://github.com/reza-em/multi-platform-shop-chatbot-telegram-bale/stargazers)
+
 > Shop and customer-service bot for Telegram, Bale and Rubika: product catalog via website API, order status, support, admin panel and broadcast. Persian + English, Python requests, long polling.
+
+**[فارسی](#-فارسی) · [English](#-english) · [Русский](#-русский) · [Deutsch](#-deutsch)**
+
+⭐ **If this project is useful to you, please give it a star** — it helps other people find it. [**Star on GitHub**](https://github.com/reza-em/multi-platform-shop-chatbot-telegram-bale/stargazers) · 🍴 [Fork](https://github.com/reza-em/multi-platform-shop-chatbot-telegram-bale/fork) · 🐛 [Issues](https://github.com/reza-em/multi-platform-shop-chatbot-telegram-bale/issues)
+
+</div>
+
+## ✨ Highlights
+
+- 🛍 **Product catalog** (categories, search, product cards) read from your shop's website API
+- 📦 **Order tracking** with phone verification — orders are only shown to their owner
+- 💬 **Support tickets** forwarded to admins, who answer through the bot
+- 🔌 Configure the API (URL, key, auth style, endpoints, field mapping) **from inside the bot**
+- 🟦 Same logic on **Telegram, Bale and Rubika**; Persian + English
+- 🔐 Token / API-key redaction in logs, atomic state writes with file locks
+- 🧪 Offline tests with mocked Telegram and mocked website
+
+## 🎬 Demo
+
+<div align="center">
+<img src="docs/demo.gif" alt="Animated illustrative mockup of a Shop Bot chat" width="320">
+</div>
+
+<div align="center">
+<img src="docs/screenshots.png" alt="Illustrative mockup screenshots of Shop Bot" width="100%">
+</div>
+
+> 🖼 **These are illustrative mockups**, rendered locally from scripted conversations (see [`docs/mockups`](docs/mockups)). They are not real chats and contain no real user data; names, numbers and links are examples.
+
+## 🚀 Quick start
+
+```bash
+git clone https://github.com/reza-em/multi-platform-shop-chatbot-telegram-bale.git && cd multi-platform-shop-chatbot-telegram-bale
+pip install -r requirements.txt
+export SHOP_TELEGRAM_BOT_TOKEN=...   # optional SHOP_BALE_BOT_TOKEN / SHOP_RUBIKA_BOT_TOKEN
+export OWNER_USERNAME=your_telegram_username
+./run.sh            # run_bale.sh / run_rubika.sh for the other platforms
+python3 test_offline.py
+```
+
+More options, admin panel and platform notes are in the sections below. Tokens are read only from environment variables — never commit them.
+
+---
 
 ## 🌐 فارسی
 
