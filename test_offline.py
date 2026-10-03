@@ -458,7 +458,6 @@ clear(); press(EX, f"a:uc:{U2}"); ok("Joined" in last(EX) and "Tickets" in last(
 clear(); press(EX, "a:o"); ok("Recent orders" in last(EX), "orders (en)")
 clear(); press(EX, "a:ad"); ok("Admins" in last(EX) and has_btn(EX, text="Change owner"), "admins (en)")
 ok(ui.fmt_ts("en", 1790000000) == "2026/09/21 17:43" and ui.fmt_ts("fa", 1790000000) == "۱۴۰۵/۰۶/۳۰ ۱۷:۴۳", "date formatting (Gregorian en / Jalali fa, Tehran)")
-ok(TOKEN_PLACEHOLDER not in open(store.PATH).read() if False else True, "-")
 
 # ---------- state file ----------
 ok(json.load(open(store.PATH))["_v"] == 1 and not os.path.exists(store.PATH + ".tmp"), "state.json valid, atomic (no tmp left)")
